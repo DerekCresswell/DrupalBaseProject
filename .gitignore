@@ -1,0 +1,19 @@
+# Drupal ignores.
+
+vendor/
+
+web/*.*
+web/core
+
+web/modules/contrib
+web/modules/README.txt
+
+web/profiles
+
+web/sites/*.*
+web/sites/default/*.*
+web/sites/default/files
+!web/sites/default/dev.settings.php
+
+web/themes/contrib
+web/themes/README.txt
