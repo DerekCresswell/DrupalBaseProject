@@ -53,7 +53,7 @@ def sass(c, watch = False):
 
 @task(
   pre = [start],
-  post = [sass]
+  post = [sass, update]
 )
 def setup(c):
   """
@@ -62,11 +62,9 @@ def setup(c):
 
   # Set up development settings.
   try:
-    c.run('cp web/sites/default/dev.settings.php web/sites/default/settings.php')
+    c.run('cp web/sites/default/dev.settings.php web/sites/default/settings.local.php')
   except:
     print('Development settings are only copied on the first set up.')
-
-  update(c)
 
   # Install node dependencies.
   c.run("""
