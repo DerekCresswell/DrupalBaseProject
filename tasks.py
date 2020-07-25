@@ -27,9 +27,11 @@ def update(c):
   Updates the sites database
   """
   # TODO, pull database down. Set this up to match your infrastructure.
-  # Download database into a file called database.sql or similar.
-  c.run('lando db-import database.sql')
-  drush(c, 'cim -y')
+  # Download database into a file called database.sql or similar then uncomment
+  # the following lines.
+
+  # c.run('lando db-import database.sql')
+  # drush(c, 'cim -y')
   drush(c, 'cr')
 
 @task(
