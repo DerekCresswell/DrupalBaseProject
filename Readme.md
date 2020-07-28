@@ -65,4 +65,20 @@ Then navigate to the site using the links that lando has given you, `site-name.l
 
 This should give you a running Drupal site to work on.
 
+### Theme Set Up
+
+Next steps are to set up a custom theme.
+
 ## Technologies
+
+There are two main technologies used to make the development process a breeze. Installation instructions can be found on their respective websites.
+
+* [Lando](https://lando.dev/)
+
+    > Lando vastly simplifies local development and DevOps so you can focus on what's important; delivering value to your clients and customers.
+
+* [Invoke](http://www.pyinvoke.org/)
+
+    > Invoke is a Python (2.7 and 3.4+) task execution tool & library, drawing inspiration from various sources to arrive at a powerful & clean feature set.
+
+These are the only two dependencies required to fully utilise this repository. Other technologies are used prominently though they are included within Lando.
