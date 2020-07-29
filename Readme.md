@@ -47,7 +47,7 @@ You can copy this template two ways.
 
 After you have the repo cloned follow these instructions to get your site set up :
 
-1. Find and replace "SITE-NAME" and "THEME-NAME" with the appropriate names.
+1. Find and replace "SITE-NAME", "PROJECT-NAME", and "THEME-NAME" with the appropriate names.
     * Also change the `name` at the top of the Lando file.
 
 2. Navigate to the project root and run `inv setup`. This should start your site and set up things like settings.
@@ -67,7 +67,7 @@ This should give you a running Drupal site to work on.
 
 ### Theme Set Up
 
-Next steps are to set up a custom theme.
+For info on setting up a custom theme see the [custom theme base](./web/themes/custom/THEME-NAME/Readme.md).
 
 ## Technologies
 
