@@ -65,6 +65,7 @@ def setup(c):
   # Set up development settings.
   try:
     c.run('cp web/sites/default/dev.settings.php web/sites/default/settings.local.php')
+    c.run('cp web/sites/default/dev.services.yml web/sites/default/services.local.yml')
   except:
     print('Development settings are only copied on the first set up.')
 
