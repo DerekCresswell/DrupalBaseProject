@@ -45,6 +45,9 @@ You can copy this template two ways.
 2. Old school
     * Clone the repo and run `rm -r path/to/repo/.git`.
 
+3. Composer
+    * Using Composer, you can create a project with the command `composer create-project derekcresswell/drupalbaseproject`.
+
 After you have the repo cloned follow these instructions to get your site set up :
 
 1. Find and replace "SITE-NAME", "PROJECT-NAME", and "THEME-NAME" with the appropriate names.
@@ -60,6 +63,9 @@ if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
 ```
+
+4. Then you can go to `composer.json` and remove the top few lines (the lines above the `repositories` key).
+    * These lines contain information for [Packagist](https://packagist.org/) and do not need to be used in a site.
 
 Then navigate to the site using the links that lando has given you, `site-name.lndo.site`, and finish the set up by following the installation instructions from Drupal.
 
