@@ -1,11 +1,12 @@
 from invoke import task
+import os
 
 @task
 def drush(c, command):
   """
   Runs a drush command in from within Lando.
   """
-  c.run('lando drush {}'.format(command), pty=True)
+  c.run(f"lando drush {command}", pty=True)
 
 @task
 def start(c):
@@ -47,11 +48,11 @@ def sass(c, watch = False):
   if watch:
     command += '-watch'
 
-  c.run("""
+  c.run(f"""
     lando ssh -s node -c
     'cd /app/web/themes/custom/THEME-NAME &&
-    node_modules/gulp/bin/gulp.js {}'
-    """.format(command))
+    node_modules/gulp/bin/gulp.js {command}'
+    """)
 
 @task(
   pre = [start],
@@ -63,11 +64,12 @@ def setup(c):
   """
 
   # Set up development settings.
-  try:
-    c.run('cp web/sites/default/dev.settings.php web/sites/default/settings.local.php')
-    c.run('cp web/sites/default/dev.services.yml web/sites/default/services.local.yml')
-  except:
-    print('Development settings are only copied on the first set up.')
+  sites_dir = 'web/sites/default/'
+  if not os.path.exists(f"{sites_dir}settings.php"):
+    c.run(f"cp {sites_dir}dev.settings.php {sites_dir}settings.local.php")
+
+  if not os.path.exists(f"{sites_dir}services.local.yml"):
+    c.run(f"cp {sites_dir}dev.services.yml {sites_dir}services.local.yml")
 
   # Install node dependencies.
   c.run("""
