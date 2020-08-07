@@ -15,6 +15,17 @@ services:
   node:
     type: node
 
+  mailhog:
+    type: mailhog
+    hogfrom:
+      - appserver
+    portforward: true
+
+proxy:
+
+  mailhog:
+    - mail.test-site.lndo.site
+
 tooling:
 
   drush:

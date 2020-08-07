@@ -18,6 +18,7 @@ This template has base files for the following :
         * Apache appserver
         * Mysql database
         * Node service
+        * Mailhog server
     * There is also tooling for :
         * Drush
         * Phpunit
