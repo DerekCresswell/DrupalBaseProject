@@ -38,7 +38,7 @@ Information on the technologies used here can be found in the [technologies](#te
 
 ## Usage
 
-You can copy this template two ways.
+You can copy this template three ways.
 
 1. Fancy
     * On GitHub, press the "Use this template" button.
